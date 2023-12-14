@@ -12,8 +12,8 @@ export default {
     colors: {
       "black": "#000000",
       "white": "#FFFFFF",
-      "color": "#1b0428",
-      "color": "#ee82ee",
+      "alt": "#1b0428",
+      "alt1": "#ee82ee",
       "white": "#FFFFFF",
       "neon": "",
       "button-color": "",

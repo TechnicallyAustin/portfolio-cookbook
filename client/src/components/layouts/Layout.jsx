@@ -14,26 +14,61 @@ export default function Layout({ children }) {
       </div>
     );
   }
+
   return (
-    <div id="app" className="w-full max-h-full flex flex-wrap">
+    <div
+      id="app"
+      className="w-full max-h-full h-full flex flex-col justify-around items-start"
+    >
       <Header key={cName + "Header"} />
+      <main className="w-full h-full max-h-full flex flex-wrap p-3">
+        <nav className="w-full h-1/6 row-span-1">
+          <ol className="w-full h-full flex justify-center items-center gap-2">
+            <li className="w-full h-full flex">
+              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
+                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
+                <figcaption className="w-full h-auto">
+                  <p>Menu title</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li className="w-full h-full flex">
+              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
+                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
+                <figcaption className="w-full h-auto">
+                  <p>Menu title</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li className="w-full h-full flex">
+              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
+                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
+                <figcaption className="w-full h-auto">
+                  <p>Menu title</p>
+                </figcaption>
+              </figure>
+            </li>
+            <li className="w-full h-full flex">
+              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
+                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
+                <figcaption className="w-full h-auto">
+                  <p>Menu title</p>
+                </figcaption>
+              </figure>
+            </li>
+          </ol>
+        </nav>
 
-      <main
-        id={cName + "Main"}
-        className="w-full h-5/6 m-h-5/6 flex flex-col flex-none gap-2 overflow-y-scroll px-3"
-      >
-        <header className="w-2/3 h-auto flex flex-col justify-start items-center py-2">
-          <h1 className="w-full h-full text-xl text-page-blue flex justify-start items-center">
-            {title}
-          </h1>
-          <div className="w-full h-0.5 bg-page-blue"></div>
-        </header>
-
-        <section
-          id={cName + "Component"}
-          className="w-full h-full grid grid-cols-1"
-        >
-          {children}
+        <section className="w-full h-5/6 flex flex-wrap overflow-y-scroll">
+          <article className="w-1/2 min-h-1/3 border"></article>
+          <article className="w-1/2 min-h-1/3 border"></article>
+          <article className="w-1/2 min-h-1/3 border"></article>
+          <article className="w-1/2 min-h-1/3 border"></article>
+          <article className="w-1/2 min-h-1/3 border"></article>
+          <article className="w-1/2 min-h-1/3 border"></article>
+        </section>
+        <section id="pagnation" className="w-full h-auto">
+            <div className="w-full h-hull"></div>
         </section>
       </main>
 

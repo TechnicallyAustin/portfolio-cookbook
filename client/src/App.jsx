@@ -3,8 +3,8 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Hero from './components/hero/Hero.jsx';
 import Layout from './components/layouts/Layout';
-import Header from './components/header/Header';
-import Recipe from './components/recipes/Recipe.jsx';
+
+import Home from './components/home/Home.jsx';
 
 
 function App() {
@@ -15,15 +15,9 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" element={<Layout><Hero /></Layout>} />
+          <Route path="/home" element={<Layout><Home /></Layout>} />
         </Routes>
       </Router>
-
-         <Router>
-        <Routes>
-          <Route path="/" element={<Layout><Recipe /></Layout>} />
-        </Routes>
-      </Router>
-
       
     </>
   );

@@ -4,7 +4,7 @@
   max-height: 100%;
   width: 100%;
   max-width: 100%;
-  margin: 0 auto;
+
   box-sizing: border-box;
 }
 
@@ -15,8 +15,8 @@
 
 
 
-/*{
+*{
   background: #000 !important;
   color: #0f0 !important;
   outline: solid #f00 1px !important;
-} */
+} 
