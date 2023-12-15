@@ -1,6 +1,9 @@
 import React from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
+import Food from '../../assets/images/food.jpeg'
+import Card from "../cards/Card";
+import MenuNav from "../menuNav/MenuNav";
 
 
 export default function Layout({ children }) {
@@ -18,61 +21,32 @@ export default function Layout({ children }) {
   return (
     <div
       id="app"
-      className="w-full max-h-full h-full flex flex-col justify-around items-start"
+      className="w-full max-h-full h-full flex flex-col items-start"
     >
       <Header key={cName + "Header"} />
-      <main className="w-full h-full max-h-full flex flex-wrap p-3">
-        <nav className="w-full h-1/6 row-span-1">
-          <ol className="w-full h-full flex justify-center items-center gap-2">
-            <li className="w-full h-full flex">
-              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
-                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
-                <figcaption className="w-full h-auto">
-                  <p>Menu title</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li className="w-full h-full flex">
-              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
-                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
-                <figcaption className="w-full h-auto">
-                  <p>Menu title</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li className="w-full h-full flex">
-              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
-                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
-                <figcaption className="w-full h-auto">
-                  <p>Menu title</p>
-                </figcaption>
-              </figure>
-            </li>
-            <li className="w-full h-full flex">
-              <figure className="w-full h-full flex flex-col justify-center items-center gap-3">
-                <img id="" alt="" src="" className="w-5/6 h-3/5 rounded-full" />
-                <figcaption className="w-full h-auto">
-                  <p>Menu title</p>
-                </figcaption>
-              </figure>
-            </li>
-          </ol>
-        </nav>
+      <main className="w-full h-full flex flex-col px-3 gap-2">
+        <section className="w-full h-1/6">
+          <MenuNav />
+        </section>
 
-        <section className="w-full h-5/6 flex flex-wrap overflow-y-scroll">
-          <article className="w-1/2 min-h-1/3 border"></article>
-          <article className="w-1/2 min-h-1/3 border"></article>
-          <article className="w-1/2 min-h-1/3 border"></article>
-          <article className="w-1/2 min-h-1/3 border"></article>
-          <article className="w-1/2 min-h-1/3 border"></article>
-          <article className="w-1/2 min-h-1/3 border"></article>
+        <section className="w-full h-5/6 flex flex-col">
+          <header>
+            <h2>Section title</h2>
+          </header>
+          <section className="w-full ">
+            <section className="w-full h-full flex flex-wrap">
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+              <Card />
+            </section>
+          </section>
         </section>
-        <section id="pagnation" className="w-full h-auto">
-            <div className="w-full h-hull"></div>
-        </section>
+
+        <section className="w-full h-"></section>
       </main>
-
-      <Footer key={cName + "Footer"} />
     </div>
   );
 }
