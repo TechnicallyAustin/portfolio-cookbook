@@ -4,6 +4,7 @@ import Footer from "../footer/Footer";
 import Food from '../../assets/images/food.jpeg'
 import Card from "../cards/Card";
 import MenuNav from "../menuNav/MenuNav";
+import Pagnation from "../pagnation/Pagnation";
 
 
 export default function Layout({ children }) {
@@ -19,34 +20,28 @@ export default function Layout({ children }) {
   }
 
   return (
-    <div
-      id="app"
-      className="w-full h-full flex flex-wrap"
-    >
+    <div id="app" className="w-full h-full flex flex-col">
       <Header key={cName + "Header"} />
-      <main className="w-full h-5/6 flex flex-wrap justify-start px-3">
-
-        <section className="w-full h-1/6">
+      <main className="w-full h-full max-h-full flex flex-col p-3 gap-2">
+        <section i="menuNav" className="w-full h-28">
           <MenuNav />
         </section>
-        
-          <header className="w-full h-auto row-span-1">
-            <h2>Section title</h2>
-          </header>
 
-        <section className="w-full h-4/5 flex justify-start items-center">
-            <section className="w-full h-full flex flex-wrap">
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-              <Card />
-            </section>
+        <section i="menuCards" className="relative w-full h-4/5 ">
+          <section id="cardContainer" className="absolute w-full h-full flex flex-wrap">
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+          </section>
         </section>
 
-        <section className="w-full h-8 flex justify-center items-center">
-            <p className="w-full h-full flex justify-center items-center">Pagnation</p>
+        <section
+          i="pagnation"
+          className="w-full h-8 flex justify-center items-center">
+            <Pagnation />
         </section>
       </main>
     </div>
