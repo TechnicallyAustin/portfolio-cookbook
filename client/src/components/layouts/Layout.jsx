@@ -21,19 +21,20 @@ export default function Layout({ children }) {
   return (
     <div
       id="app"
-      className="w-full max-h-full h-full flex flex-col items-start"
+      className="w-full h-full flex flex-wrap"
     >
       <Header key={cName + "Header"} />
-      <main className="w-full h-full flex flex-col px-3 gap-2">
+      <main className="w-full h-5/6 flex flex-wrap justify-start px-3">
+
         <section className="w-full h-1/6">
           <MenuNav />
         </section>
-
-        <section className="w-full h-5/6 flex flex-col">
-          <header>
+        
+          <header className="w-full h-auto row-span-1">
             <h2>Section title</h2>
           </header>
-          <section className="w-full ">
+
+        <section className="w-full h-4/5 flex justify-start items-center">
             <section className="w-full h-full flex flex-wrap">
               <Card />
               <Card />
@@ -42,10 +43,11 @@ export default function Layout({ children }) {
               <Card />
               <Card />
             </section>
-          </section>
         </section>
 
-        <section className="w-full h-"></section>
+        <section className="w-full h-8 flex justify-center items-center">
+            <p className="w-full h-full flex justify-center items-center">Pagnation</p>
+        </section>
       </main>
     </div>
   );

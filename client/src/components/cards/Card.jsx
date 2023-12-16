@@ -3,7 +3,7 @@ import Food from '../../assets/images/food.jpeg'
 
 export default function Card() {
     return (
-      <article className="w-1/2 h-1/4 p-2 rounded-lg shadow shadow-lg">
+      <article className="w-1/2 h-1/3 p-2 rounded-lg shadow shadow-lg">
         <figure className="w-full h-full border rounded-lg  flex flex-wrap justify-center rounded-lg items-center">
           <img
             id=""
