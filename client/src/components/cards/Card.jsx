@@ -1,9 +1,14 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Food from '../../assets/images/food.jpeg'  
 
 export default function Card() {
+    const [cardClicked, setCardClicked] = useState(false)
+    const toggleCard = () => {
+        setCardClicked(!cardClicked)
+        console.log("Card toggled")
+    }
     return (
-      <article className=" relative w-1/2 h-1/3 p-2 rounded-lg">
+      <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
         <figure className="w-full h-full  rounded-lg shadow shadow-md shadow-success  flex flex-wrap justify-center  items-center">
           <img
             id=""
