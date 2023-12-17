@@ -8,7 +8,6 @@ export default function Card() {
         console.log("Card toggled")
     }
     return (
-      <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
         <figure className="w-full h-full  rounded-lg shadow shadow-md shadow-success  flex flex-wrap justify-center  items-center">
           <img
             id=""
@@ -20,6 +19,5 @@ export default function Card() {
             <p className="w-full">Item Title</p>
           </figcaption>
         </figure>
-      </article>
     );
 }

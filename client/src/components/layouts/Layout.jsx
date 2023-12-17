@@ -1,10 +1,11 @@
-import React from "react";
+import React, {useState} from "react";
 import Header from "../header/Header";
 import Footer from "../footer/Footer";
 import Food from '../../assets/images/food.jpeg'
 import Card from "../cards/Card";
 import MenuNav from "../menuNav/MenuNav";
 import Pagnation from "../pagnation/Pagnation";
+import ExpandedCard from "../cards/ExpandedCard";
 
 
 export default function Layout({ children }) {
@@ -19,6 +20,13 @@ export default function Layout({ children }) {
     );
   }
 
+      const [cardClicked, setCardClicked] = useState(false);
+      const toggleCard = (e) => {
+        console.log(e.target.src)
+        setCardClicked(!cardClicked);
+        console.log("Card toggled");
+      };
+
   return (
     <div id="app" className="w-full h-full flex flex-col">
       <Header key={cName + "Header"} />
@@ -29,12 +37,25 @@ export default function Layout({ children }) {
 
         <section i="menuCards" className="relative w-full h-4/5 ">
           <section id="cardContainer" className="absolute w-full h-full flex flex-wrap">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+            {cardClicked && <ExpandedCard  />}
+             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
+                <Card />
+             </article>
+             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
+                <Card />
+             </article>
+             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
+                <Card />
+             </article>
+             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
+                <Card />
+             </article>
+             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
+                <Card />
+             </article>
+             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
+                <Card />
+            </article>
           </section>
         </section>
 

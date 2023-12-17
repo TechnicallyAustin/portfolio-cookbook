@@ -3,6 +3,9 @@ import NavMenu from '../../assets/icons/NavMenu'
 import { Link } from 'react-router-dom'
 import FilterIcon from '../../assets/icons/FilterIcon'
 import SearchIcon from '../../assets/icons/SearchIcon';
+import ExpandedSearch from './ExpandedSearch';
+import ExpandedMenu from './ExpandedMenu';
+import ExpandedFilter from './ExpandedFilter';
 
 export default function Header() {
     const [searchClicked, setSearchClicked] = useState(false)
@@ -62,6 +65,9 @@ export default function Header() {
             </article>
           </nav>
         </section>
+        {searchClicked && <ExpandedSearch />}
+        {menuClicked && <ExpandedMenu toggle={toggleMenu}/>}
+        {filterClicked && <ExpandedFilter />}
       </header>
     );
 }
