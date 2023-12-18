@@ -16,6 +16,9 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout><Hero /></Layout>} />
           <Route path="/home" element={<Layout><Home /></Layout>} />
+          <Route path="/login" element={<Layout><Home /></Layout>} />
+          <Route path="/register" element={<Layout><Home /></Layout>} />
+          <Route path="/logout" element={<Layout><Home /></Layout>} />
         </Routes>
       </Router>
       

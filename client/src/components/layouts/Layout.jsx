@@ -20,12 +20,6 @@ export default function Layout({ children }) {
     );
   }
 
-      const [cardClicked, setCardClicked] = useState(false);
-      const toggleCard = (e) => {
-        console.log(e.target.src)
-        setCardClicked(!cardClicked);
-        console.log("Card toggled");
-      };
 
   return (
     <div id="app" className="w-full h-full flex flex-col">
@@ -37,25 +31,12 @@ export default function Layout({ children }) {
 
         <section i="menuCards" className="relative w-full h-4/5 ">
           <section id="cardContainer" className="absolute w-full h-full flex flex-wrap">
-            {cardClicked && <ExpandedCard  />}
-             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
-                <Card />
-             </article>
-             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
-                <Card />
-             </article>
-             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
-                <Card />
-             </article>
-             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
-                <Card />
-             </article>
-             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
-                <Card />
-             </article>
-             <article className=" relative w-1/2 h-1/3 p-2 rounded-lg" onClick={toggleCard}>
-                <Card />
-            </article>
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
+            <Card />
           </section>
         </section>
 
