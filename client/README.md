@@ -1,8 +1,56 @@
-# React + Vite
+The application is pretty simple. Users can create teams where other users can join, and they start discussions on different topics between each other.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A team is created during the registration if the user didn't choose to join an existing team and the user becomes the admin of it.
 
-Currently, two official plugins are available:
+[Demo](https://bulletproof-react-app.netlify.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Data model
+
+The application contains the following models:
+
+- User - can have one of these roles:
+    - `ADMIN` can:
+        - create/edit/delete recipes
+        - create/edit/delete discussions
+        - create/delete all comments
+        - delete users
+        - edit own profile
+    - `USER` - can:
+        - edit own profile
+        - create/delete own recipes
+        - create/delete own comments in discussions
+- Recipe: ingredients and steps to make the specific meal/drink/snack/etc
+- Discussion: represents discussions created by team members.
+- Comment: represents all the messages for a recipe.
+
+## Get Started
+
+Prerequisites:
+
+- Node 14+
+- Yarn 1.22+
+
+To set up the app execute the following commands.
+
+```bash
+git clone repo-link
+cd project folder
+cp .env.example .env
+yarn install
+
+```
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000/) to view it in the browser.
+
+### `npm build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
